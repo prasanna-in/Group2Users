@@ -2,6 +2,6 @@
 List users in a AWS  group
   
 Example Usage :
-  Group2Users <Group Name>
+  Group2Users GroupName
 
 
