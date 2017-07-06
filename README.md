@@ -5,6 +5,12 @@ List users in a AWS  group
   
 Example Usage :
 
+
+//We first create aws session. We pass aws session object and groupname to get the users 
+	
+// Output is string groupname and list users in the group
+	
+
 package main
 
 
@@ -19,9 +25,6 @@ func main() {
 				SharedConfigState: session.SharedConfigEnable,
 			}))
 			
-	//We first create aws session. We pass aws session object and groupname to get the users 
-	
-	// Output is string groupname and list users in the group
 	
 	fmt.Println(group2users.ListUsersForGroup(group2users.GetIAMService(sess),"GroupName"))
 }
