@@ -33,6 +33,7 @@ func main() {
 	// Output is string groupname and list users in the group
 	
 	fmt.Println(group2users.ListUsersForGroup(group2users.GetIAMService(sess),"GroupName"))
+	fmt.Println(group2users.ListUsersForGroups(group2users.GetIAMService(sess),[]string{"GroupName","GroupName"}))
 }
 
 
