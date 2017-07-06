@@ -2,11 +2,16 @@
 
 List users in a AWS  group
 =========================
+
+
+Installation : go get github.com/prasanna-in/Group2Users
+
+Documentation : http://godoc.org/github.com/prasanna-in/Group2Users
+
+
+
   
 Example Usage :
-
-
-	
 
 package main
 
