@@ -18,6 +18,7 @@ import (
 )
 
 func main() {
+
 	sess := session.Must(session.NewSessionWithOptions(session.Options{
 				SharedConfigState: session.SharedConfigEnable,
 			}))
