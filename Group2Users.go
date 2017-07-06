@@ -10,7 +10,12 @@ import (
 
 )
 
-func ListUsersForGroup(iamService *iam.IAM,groupName string)  ([]string) {
+type groupUsers struct {
+	groupName string
+	users []string
+}
+
+func ListUsersForGroup(iamService *iam.IAM,groupName string)  ( []string) {
 	lookupGroup := groupName
 		var users []string
 		resultUsers, err := iamService.ListUsers(&iam.ListUsersInput{})
@@ -27,6 +32,17 @@ func ListUsersForGroup(iamService *iam.IAM,groupName string)  ([]string) {
 		}
 		return  users
 	
+}
+func ListUsersForGroups(iamService *iam.IAM, groups []string) ([]groupUsers) {
+	gu := groupUsers{}
+	var gus []groupUsers
+	for _, value := range groups {
+		users := ListUsersForGroup(iamService,value)
+		gu.groupName = value
+		gu.users = users
+		gus = append(gus,gu)
+	}
+	return gus
 }
 
 func GetIAMService(session *session.Session) (*iam.IAM) {
