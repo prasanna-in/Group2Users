@@ -1,4 +1,5 @@
-//This Package returns the list of users in a group. This is very helpful to find who are part of a group in AWS. This is provided asa library, The benefit of this one could script it write like a security IDS which can detect any changes to groups in real time. 
+//This Package returns the list of users in a group. This is very helpful to find who are part of a group in AWS. 
+//The benefit of this library is they can use it to find users in a group or script it like a security IDS (Intrusion Detection System) which can be used to detect any changes to groups. 
 package group2users
 
 import (
