@@ -5,7 +5,7 @@ List users in a AWS  group
   
 Example Usage :
 
-`package main
+package main
 
 import "github.com/aws/aws-sdk-go/aws/session"
 
@@ -23,7 +23,6 @@ func main() {
 	fmt.Println(group2users.ListUsersForGroup(group2users.GetIAMService(sess),"Security"))
 
 }
-`
 
 
 
