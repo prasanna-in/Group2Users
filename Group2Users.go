@@ -1,3 +1,6 @@
+//This Package returns the list of users for a given group
+//The Package takes a AWS session and groupname as input
+//The Package returns the groupname and a list of users
 package group2users
 
 import (
